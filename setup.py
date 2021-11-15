@@ -17,7 +17,7 @@ ext_modules = cythonize([
               ),
     Extension("LDWrapper",
               ["LDWrapper.pyx"],
-              libraries=["m"],
+              libraries=["msvcrt"],
               extra_compile_args=["-ffast-math"],
               )
 ], language_level="3")
