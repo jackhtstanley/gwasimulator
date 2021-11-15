@@ -12,7 +12,7 @@ if platform.system() == 'Darwin':
 ext_modules = cythonize([
     Extension("c_utils",
               ["c_utils.pyx"],
-              libraries=["m"],
+              libraries=["msvcrt"],
               extra_compile_args=["-ffast-math", "-fopenmp"]
               ),
     Extension("LDWrapper",
